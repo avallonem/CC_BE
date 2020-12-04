@@ -14,7 +14,11 @@ exports.create = (req, res) => {
     const asset = new Asset({
       title: req.body.title,
       description: req.body.description,
-      published: req.body.published ? req.body.published : false
+      terms: req.body.terms,
+      provider: req.body.provider,
+      address_provider: req.body.address_provider,
+      address_deposit_contract: req.body.address_deposit_contract
+
     });
  
     // Save asset in the database
@@ -33,8 +37,8 @@ exports.create = (req, res) => {
 
 // Retrieve all assets from the database.
 exports.findAll = (req, res) => {
-    const title = req.query.title;
-    var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
+    const provider = req.query.provider;
+    var condition = provider ? { provider: { $regex: new RegExp(provider), $options: "i" } } : {};
   
     Asset.find(condition)
       .then(data => {

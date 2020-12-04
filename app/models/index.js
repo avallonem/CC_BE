@@ -8,6 +8,7 @@ db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.customers = require("./customer.model.js")(mongoose);
 db.assets = require("./asset.model.js")(mongoose);
+db.transactions = require("./transaction.model.js")(mongoose);
 
 
 module.exports = db;
