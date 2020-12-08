@@ -10,7 +10,7 @@ module.exports = app => {
     router.get("/", transactions.findAll);
   
     // Retrieve all published transactions
-    router.get("/published", transactions.findAllPublished);
+    router.get("/find", transactions.findByTo);
   
     // Retrieve a single customer with id
     router.get("/:id", transactions.findOne);

@@ -25,7 +25,11 @@ exports.create = (req, res) => {
       risk_type: req.body.risk_type,
       asset_title: req.body.asset_title,
       asset_description: req.body.asset_description,
-      asset_value: req.body.asset_value
+      asset_value: req.body.asset_value,
+      asset_terms: req.body.asset_terms,
+      asset_provider: req.body.asset_provider,
+      asset_address_provider: req.body.address_provider,
+      asset_address_deposit_contract: req.body.asset_address_deposit_contract
 
     });
  

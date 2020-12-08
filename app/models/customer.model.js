@@ -16,7 +16,11 @@ module.exports = mongoose => {
         risk_type: String,
         asset_title: String,
         asset_description: String,
-        asset_value: Number
+        asset_value: Number,
+        asset_terms:String,
+        asset_provider:String,
+        asset_address_provider:String,
+        asset_address_deposit_contract:String
       },
       { timestamps: true }
     )

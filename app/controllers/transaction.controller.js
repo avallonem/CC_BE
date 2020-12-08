@@ -134,8 +134,11 @@ exports.deleteAll = (req, res) => {
       });
   };
 // Find all published transactions
-exports.findAllPublished = (req, res) => {
-    Transaction.find({ published: true })
+exports.findByTo = (req, res) => {
+    const to_name = req.query.to_name;
+    var condition = to_name ? { to_name: { $regex: new RegExp(to_name), $options: "i" } } : {};
+  
+    Transaction.find(condition)
       .then(data => {
         res.send(data);
       })
