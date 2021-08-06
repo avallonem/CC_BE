@@ -5,7 +5,7 @@ const cors = require("cors");
 const app = express();
 
 var corsOptions = {
-  origin: ["http://cc-pilots-vm2.westeurope.cloudapp.azure.com:3000","https://cc-pilots-vm2.westeurope.cloudapp.azure.com",/\.azure\.com$/]
+  origin: ["http://cc-pilots-vm2.westeurope.cloudapp.azure.com:3000","https://cc-pilots-vm2.westeurope.cloudapp.azure.com","http://localhost:3000","https://localhost","http://20.86.113.148:3000","https://20.86.113.148",/\.azure\.com$/]
 };
 
 app.use(cors(corsOptions));
