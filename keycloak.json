@@ -1,0 +1,12 @@
+{
+  "realm": "Financial Infrastructures Backend",
+  "auth-server-url": "https://cc-keycloak.westeurope.cloudapp.azure.com:8443/auth/",
+  "ssl-required": "external",
+  "resource": "finbackend",
+  "verify-token-audience": true,
+  "credentials": {
+    "secret": "131766fa-33b1-4b12-a109-2c82043e1dd1"
+  },
+  "confidential-port": 0,
+  "policy-enforcer": {}
+}
